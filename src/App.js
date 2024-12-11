@@ -4,7 +4,8 @@ import Login from '../src/component/login';
 import Form from '../src/component/form';
 import Create from '../src/component/create';
 import Log from '../src/component/log';
-import StateExample from '../src/component/StateExample';
+import Events from '../src/component/events';
+
 function App() {
   return (
     <>
@@ -14,8 +15,8 @@ function App() {
       <Route path='/createForm' element={<Form/>}/>
       <Route path='/Form' element={<Create/>}/>
       <Route path='/log' element={<Log/>}/>
-      <Route path='/stateexample' element={<StateExample/>}/>
-    </Routes>
+      <Route path='/events' element={<Events/>}/>
+         </Routes>
     </BrowserRouter>
     </>
   );
