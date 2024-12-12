@@ -5,6 +5,8 @@ import Form from '../src/component/form';
 import Create from '../src/component/create';
 import Log from '../src/component/log';
 import Events from '../src/component/events';
+import Lists from '../src/component/lists';
+import Forms from '../src/component/forms';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Route path='/Form' element={<Create/>}/>
       <Route path='/log' element={<Log/>}/>
       <Route path='/events' element={<Events/>}/>
+      <Route path='/lists' element={<Lists/>}/>
+      <Route path='/forms' element={<Forms/>}/>
          </Routes>
     </BrowserRouter>
     </>
