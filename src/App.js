@@ -7,6 +7,8 @@ import Log from '../src/component/log';
 import Events from '../src/component/events';
 import Lists from '../src/component/lists';
 import Forms from '../src/component/forms';
+import Memo from '../src/component/memo';
+import Conditional from '../src/component/conditional';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
       <Route path='/events' element={<Events/>}/>
       <Route path='/lists' element={<Lists/>}/>
       <Route path='/forms' element={<Forms/>}/>
+      <Route path='/memo' element={<Memo/>}/>
+      <Route path='/conditional' element={<Conditional/>}/>
          </Routes>
     </BrowserRouter>
     </>
