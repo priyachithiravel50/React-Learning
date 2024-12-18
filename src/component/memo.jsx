@@ -1,26 +1,26 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 
-function memo() {
+// function memo() {
 
-    const Child = React.memo(({ value }) => {
-        console.log("Child rendered!");
-        return <div>Value: {value}</div>;
-      });
+//     const Child = React.memo(({ value }) => {
+//         console.log("Child rendered!");
+//         return <div>Value: {value}</div>;
+//       });
       
-      const Parent = () => {
-        const [count, setCount] = useState(0);
-      }
+//       const Parent = () => {
+//         const [count, setCount] = useState(0);
+//       }
       
 
-  return (
-    <div>
-       <button onClick={() => setCount(count + 1)}>Increment</button>
-       <Child value="Hello" />
-    </div>
-  )
-}
+//   return (
+//     <div>
+//        <button onClick={() => setCount(count + 1)}>Increment</button>
+//        <Child value="Hello" />
+//     </div>
+//   )
+// }
 
-export default memo
+// export default memo
 
 
 

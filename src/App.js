@@ -9,11 +9,22 @@ import Lists from '../src/component/lists';
 import Forms from '../src/component/forms';
 import Memo from '../src/component/memo';
 import Conditional from '../src/component/conditional';
+import Arrowfunction from '../src/component/arrowfunction';
+import Home from '../src/component/Home';
+import About from '../src/component/about';
+import Contact from '../src/component/contact';
+import LinkRoute from './component/LinkRoute';
+import DynamicRoute from './component/DynamicRoute';
+import Error from './component/Error';
+
+
+
 
 function App() {
   return (
     <>
     <BrowserRouter>
+    <LinkRoute/>
     <Routes>
       <Route path='/loginForm' element={<Login/>}/>
       <Route path='/createForm' element={<Form/>}/>
@@ -24,6 +35,17 @@ function App() {
       <Route path='/forms' element={<Forms/>}/>
       <Route path='/memo' element={<Memo/>}/>
       <Route path='/conditional' element={<Conditional/>}/>
+      <Route path='/arrowfunction' element={<Arrowfunction/>}/>
+      <Route path='/home' element={<Home/>}/>
+      <Route path='/about' element={<About/>}/>
+      <Route path='/contact' element={<Contact/>}/>
+      <Route path='/linkroute' element={<LinkRoute/>}/>
+      <Route path='/dynamicroute/:UserName' element={<DynamicRoute/>}/>
+      <Route path='*' element={<Error/>}/>
+
+
+    
+      
          </Routes>
     </BrowserRouter>
     </>
