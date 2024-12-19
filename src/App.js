@@ -7,7 +7,7 @@ import Log from '../src/component/log';
 import Events from '../src/component/events';
 import Lists from '../src/component/lists';
 import Forms from '../src/component/forms';
-import Memo from '../src/component/memo';
+// import Memo from '../src/component/memo';
 import Conditional from '../src/component/conditional';
 import Arrowfunction from '../src/component/arrowfunction';
 import Home from '../src/component/Home';
@@ -16,6 +16,9 @@ import Contact from '../src/component/contact';
 import LinkRoute from './component/LinkRoute';
 import DynamicRoute from './component/DynamicRoute';
 import Error from './component/Error';
+import ES6 from './component/ES6';
+import Reactmemo from './component/Reactmemo';
+import Styling from './component/Styling';
 
 
 
@@ -33,7 +36,6 @@ function App() {
       <Route path='/events' element={<Events/>}/>
       <Route path='/lists' element={<Lists/>}/>
       <Route path='/forms' element={<Forms/>}/>
-      <Route path='/memo' element={<Memo/>}/>
       <Route path='/conditional' element={<Conditional/>}/>
       <Route path='/arrowfunction' element={<Arrowfunction/>}/>
       <Route path='/home' element={<Home/>}/>
@@ -42,9 +44,10 @@ function App() {
       <Route path='/linkroute' element={<LinkRoute/>}/>
       <Route path='/dynamicroute/:UserName' element={<DynamicRoute/>}/>
       <Route path='*' element={<Error/>}/>
+      <Route path='/es6' element={<ES6/>}/>
+      <Route path='/reactmemo' element={<Reactmemo/>}/>
+      <Route path='/styling' element={<Styling/>}/>
 
-
-    
       
          </Routes>
     </BrowserRouter>
