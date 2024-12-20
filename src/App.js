@@ -19,6 +19,7 @@ import Error from './component/Error';
 import ES6 from './component/ES6';
 import Reactmemo from './component/Reactmemo';
 import Styling from './component/Styling';
+import Usestate from './component/Usestate';
 
 
 
@@ -35,7 +36,7 @@ function App() {
       <Route path='/log' element={<Log/>}/>
       <Route path='/events' element={<Events/>}/>
       <Route path='/lists' element={<Lists/>}/>
-      <Route path='/forms' element={<Forms/>}/>
+      {/* <Route path='/forms' element={<Forms/>}/> */}
       <Route path='/conditional' element={<Conditional/>}/>
       <Route path='/arrowfunction' element={<Arrowfunction/>}/>
       <Route path='/home' element={<Home/>}/>
@@ -47,6 +48,8 @@ function App() {
       <Route path='/es6' element={<ES6/>}/>
       <Route path='/reactmemo' element={<Reactmemo/>}/>
       <Route path='/styling' element={<Styling/>}/>
+      <Route path='/usestate' element={<Usestate/>}/>
+
 
       
          </Routes>
