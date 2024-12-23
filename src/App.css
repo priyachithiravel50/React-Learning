@@ -41,4 +41,48 @@
   background-color: rgb(244, 202, 229);
 }
 
+/* .form{
+  border: 1px solid black;
+
+} */
+
+
+
+form {
+  width: 300px;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 50px auto;
+  background-color: #f1c7c7;
+  box-shadow: rgba(60, 66, 87, 0.12) 0px 0px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+}
+
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+}
+
+button{
+  width: 100px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 6px;
+  margin-left: 100px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+button:hover{
+  background-color: rgb(129, 168, 252);
+}
 

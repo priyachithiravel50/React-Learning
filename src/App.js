@@ -20,6 +20,9 @@ import ES6 from './component/ES6';
 import Reactmemo from './component/Reactmemo';
 import Styling from './component/Styling';
 import Usestate from './component/Usestate';
+import Usestateform from './component/Usestateform';
+
+
 
 
 
@@ -49,6 +52,7 @@ function App() {
       <Route path='/reactmemo' element={<Reactmemo/>}/>
       <Route path='/styling' element={<Styling/>}/>
       <Route path='/usestate' element={<Usestate/>}/>
+      <Route path='/usestateform' element={<Usestateform/>}/>
 
 
       
