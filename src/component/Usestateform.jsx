@@ -42,7 +42,7 @@ function Usestateform() {
   
     <div class="form-group">
       <label for="title">Choose a title:</label><br />
-      <select value={Name} onChange={handleNamechange} required>
+      <select value={Name} onChange={handleNamechange} >
         <option value="" disabled selected>Select a title</option>
         <option value="html">HTML</option>
         <option value="css">CSS</option>
@@ -56,7 +56,7 @@ function Usestateform() {
    
     <div class="form-group">
       <label for="status">Select Status:</label><br />
-      <select value={status} onChange={handlestatuschange} required>
+      <select value={status} onChange={handlestatuschange}>
         <option value="" disabled selected>Select an option</option>
         <option value="learning">Learning</option>
         <option value="completed">Completed</option>
@@ -66,7 +66,7 @@ function Usestateform() {
       
     <div class="form-group">
       <label for="status">Select:</label><br />
-      <select value={select} onChange={handleselectchange} required>
+      <select value={select} onChange={handleselectchange} >
         <option value="" disabled selected>Select an option</option>
         <option value="true">True</option>
         <option value="false">False</option>
