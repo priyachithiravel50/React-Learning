@@ -1,37 +1,83 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+// import Usestate from './Usestate'
 
-function Useffect() {
-    const name = useState('priya')
-
-   const [count, setCount] = useState(0); 
-   const [counter, setCounter] = useState(0); 
-
-
-   useEffect(() => {
-    console.log('inside useeffect')
-
-   },[count])
-
-   const increment = () => {
-    setCount(count +1);
-   }
-
-   const decrement = () => {
-   setCounter(counter - 1); 
-   };
-   return (
-  
-    <div className='button'>
-      <h1>Welcome to {name}</h1>
-        <p>Count: {count}</p>
-        <button onClick={increment} style={{marginLeft: '20px'}}>Increment</button>
-        <p>Count: {counter}</p>
-        <button onClick={decrement} style={{marginLeft: '20px'}}>Decrement</button>
+function Useeffect() {
+  // const[Name,setName] = Usestate('')
+  // const[Counter,setCounter] = Usestate('')
+  return (
+    <div className='text'>
+       <h1 style={{marginLeft:'70px'}}>Login Form</h1>
+       <label>Name:</label> <br/>
+      <input type='text' id='name' autoComplete='off'/>
+     <br/>
+     
+      <label>Password:</label> <br/>
+      <input type='text' id='password' autoComplete='off'/>
+     <br/>
+      <button>submit</button>
+     
     </div>
   )
 }
 
-export default Useffect
+export default Useeffect
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useEffect, useState } from 'react'
+
+// function Useffect() {
+//     const name = useState('priya')
+
+//    const [count, setCount] = useState(0); 
+//    const [counter, setCounter] = useState(0); 
+
+
+//    useEffect(() => {
+//     console.log('inside useeffect')
+
+//    },[count])
+
+//    const increment = () => {
+//     setCount(count +1);
+//    }
+
+//    const decrement = () => {
+//    setCounter(counter - 1); 
+//    };
+//    return (
+  
+//     <div className='button'>
+//       <h1>Welcome to {name}</h1>
+//         <p>Count: {count}</p>
+//         <button onClick={increment} style={{marginLeft: '20px'}}>Increment</button>
+//         <p>Count: {counter}</p>
+//         <button onClick={decrement} style={{marginLeft: '20px'}}>Decrement</button>
+//     </div>
+//   )
+// }
+
+// export default Useffect
 
 
 
