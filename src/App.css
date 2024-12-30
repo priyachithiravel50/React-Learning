@@ -48,16 +48,16 @@
 
 
 
-form {
+/* form {
   width: 300px;
   padding: 30px;
   border-radius: 10px;
   margin: 50px auto;
   background-color: #f1c7c7;
   box-shadow: rgba(60, 66, 87, 0.12) 0px 0px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
-}
+} */
 
-
+/* 
 .form-group {
   margin-bottom: 10px;
 }
@@ -84,7 +84,7 @@ button{
 
 button:hover{
   background-color: rgb(129, 168, 252);
-}
+} */
 
 
 
@@ -92,7 +92,7 @@ button:hover{
   margin: auto;
   margin-top: 8%;
   background: white;
-  width: 300px;
+  width: 330px;
   padding: 50px;
   border-radius: 10px;
   /* margin: 50px auto; */
@@ -118,17 +118,50 @@ button{
   border-radius: 5px;
 
 }
+select{
+  width: 105%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+}
 
 button{
   width: 100px;
   border-radius: 5px;
   border: 1px solid #ccc;
   padding: 6px;
-  margin-left: 100px;
-  margin-top: 30px;
+  margin-left: 115px;
+  margin-top: 20px;
   font-size: 15px;
 }
 
 button:hover{
-  background-color: rgb(144, 227, 150);
+  background-color: red;
 }
+
+#sign{
+  margin-left: 270px;
+  margin-bottom: 50px;
+}
+
+
+#server{
+  margin-left: 105px;
+  font-size: 110px;
+  color: #203864;
+  }
+
+  .text1{
+    margin: auto;
+    margin-top: 2%;
+    height: 570px;
+    background: white;
+    width: 400px;
+    padding: 50px;
+    border-radius: 10px;
+    /* margin: 50px auto; */
+    /* background-color: whitesmoke; */
+    box-shadow: rgba(60, 66, 87, 0.12) 0px 0px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+  }

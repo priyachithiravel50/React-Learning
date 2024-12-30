@@ -1,28 +1,110 @@
-import React from 'react'
-// import Usestate from './Usestate'
+import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 function Useeffect() {
-  // const[Name,setName] = Usestate('')
-  // const[Counter,setCounter] = Usestate('')
+  const navigate = useNavigate();
+
+  const [form, setForm] = useState({ Name: '', Password: '' });
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setForm((prevForm) => ({ ...prevForm, [id === 'name' ? 'Name' : 'Password']: value }));
+  };
+
+  const handleSubmit = async () => {
+    const { Name, Password } = form;
+
+    if (!Name || !Password) {
+      alert('All fields are required');
+      return;
+    }
+
+    try {
+      const response = await fetch('https://6729a5066d5fa4901b6dcac9.mockapi.io/LoginForm/Login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ Name, Password }),
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Response was not ok: ${errorText}`);
+      }
+
+      const data = await response.json();
+      console.log('Response from server:', data);
+      alert('Form Submitted Successfully!');
+
+      // Reset the form
+      setForm({ Name: '', Password: '' });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error submitting the form.');
+    }
+  };
+
   return (
     <div className='text'>
-       <h1 style={{marginLeft:'70px'}}>Login Form</h1>
-       <label>Name:</label> <br/>
-      <input type='text' id='name' autoComplete='off'/>
-     <br/>
-     
-      <label>Password:</label> <br/>
-      <input type='text' id='password' autoComplete='off'/>
-     <br/>
-      <button>submit</button>
-     
+      <i className="fa-solid fa-user-circle" id="server"></i>
+      <h1 style={{ marginLeft: '70px', color: '#203864', display: 'block' }}>Login Form</h1>
+      <label>Name:</label> <br />
+      <input type='text' id='name' autoComplete='off' value={form.Name} onChange={handleChange}/>
+      <br />
+      <div style={{ marginTop: '10px' }}>
+        <label>Password:</label> <br />
+        <input type='text' id='password' autoComplete='off' value={form.Password} onChange={handleChange}required/>
+      </div>
+      <br />
+      <button onClick={handleSubmit}>Submit</button>
+      <br />
+      <a href="#" id='sign' onClick={() => navigate("/useeffects")} className="btn" >
+        Sign In
+      </a>
     </div>
-  )
+  );
 }
 
-export default Useeffect
+export default Useeffect;
 
 
+
+
+// import React from 'react'
+// import { useNavigate } from "react-router-dom"; 
+// import Usestate from './Usestate';
+// // import Usestate from './Usestate'
+
+// function Useeffect() {
+//   const navigate = useNavigate();
+//   const goToRegister = () => {
+//     navigate("/useeffects"); 
+//   };
+
+
+
+//   return (
+//     <div className='text' >
+//       <i class="fa-solid fa-user-circle" id="server"></i>
+//        <h1 style={{marginLeft:'70px',color: '#203864',display:'block'}}>Login Form</h1>
+//        <label>Name:</label> <br/>
+//       <input type='text' id='name' autoComplete='off'/>
+//      <br/>
+//      <div style={{marginTop:'10px'}}>
+//       <label>Password:</label> <br/>
+//       <input type='text' id='password' autoComplete='off'/>
+//       </div>
+//      <br/>
+//       <button >submit</button>
+//       <br/>
+//       <a href="#" id='sign' onClick={goToRegister} className="btn btn-danger d-block">Sign In
+//         </a>
+//     </div>
+//   )
+// }
+
+// export default Useeffect
 
 
 
@@ -56,7 +138,7 @@ export default Useeffect
 //    useEffect(() => {
 //     console.log('inside useeffect')
 
-//    },[count])
+//    },[count,counter])
 
 //    const increment = () => {
 //     setCount(count +1);

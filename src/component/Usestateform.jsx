@@ -56,7 +56,7 @@ function Usestateform() {
    
     <div class="form-group">
       <label for="status">Select Status:</label><br />
-      <select value={status} onChange={handlestatuschange}>
+      <select value={status} onChange={handlestatuschange} >
         <option value="" disabled selected>Select an option</option>
         <option value="learning">Learning</option>
         <option value="completed">Completed</option>

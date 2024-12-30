@@ -23,6 +23,7 @@ import Usestate from './component/Usestate';
 import Usestateform from './component/Usestateform';
 import Useffect from './component/Useeffect';
 import MyComponent from './component/MyComponent';
+import UseEffects from './component/UseEffects';
 
 
 
@@ -34,7 +35,7 @@ function App() {
   return (
     <>
     <BrowserRouter>
-    <LinkRoute/>
+    {/* <LinkRoute/> */}
     <Routes>
       <Route path='/loginForm' element={<Login/>}/>
       <Route path='/createForm' element={<Form/>}/>
@@ -58,6 +59,7 @@ function App() {
       <Route path='/usestateform' element={<Usestateform/>}/>
       <Route path='/useeffect' element={<Useffect/>}/>
       <Route path='/mycomponent' element={<MyComponent/>}/>
+      <Route path='/useeffects' element={<UseEffects/>}/>
       
       
 
