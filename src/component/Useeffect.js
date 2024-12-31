@@ -5,22 +5,40 @@ function Useeffect() {
   const navigate = useNavigate();
 
   const [form, setForm] = useState({ Name: '', Password: '' });
+  const [errors, setErrors] = useState({ Name: '', Password: '' }); // Error state
 
   const handleChange = (e) => {
     const { id, value } = e.target;
     setForm((prevForm) => ({ ...prevForm, [id === 'name' ? 'Name' : 'Password']: value }));
+
+    // Clear the error message when the user starts typing
+    setErrors((prevErrors) => ({ ...prevErrors, [id === 'name' ? 'Name' : 'Password']: '' }));
   };
 
   const handleSubmit = async () => {
     const { Name, Password } = form;
 
-    if (!Name || !Password) {
-      alert('All fields are required');
+    let formIsValid = true;
+    let validationErrors = { Name: '', Password: '' };
+
+    // Field validation
+    if (!Name) {
+      validationErrors.Name = 'Username is required';
+      formIsValid = false;
+    }
+
+    if (!Password) {
+      validationErrors.Password = 'Password is required';
+      formIsValid = false;
+    }
+
+    if (!formIsValid) {
+      setErrors(validationErrors); // Set error messages
       return;
     }
 
     try {
-      const response = await fetch('https://6729a5066d5fa4901b6dcac9.mockapi.io/LoginForm/Login', {
+      const response = await fetch('https://6729a5066d5fa4901b6dcac9.mockapi.io/LoginForm/useeffect', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -34,8 +52,11 @@ function Useeffect() {
       }
 
       const data = await response.json();
-      console.log('Response from server:', data);
+      console.log('data:', data);
       alert('Form Submitted Successfully!');
+
+      // Navigate to the display page with form data
+      navigate('/display', { state: { Name, Password } });
 
       // Reset the form
       setForm({ Name: '', Password: '' });
@@ -49,24 +70,75 @@ function Useeffect() {
     <div className='text'>
       <i className="fa-solid fa-user-circle" id="server"></i>
       <h1 style={{ marginLeft: '70px', color: '#203864', display: 'block' }}>Login Form</h1>
+
       <label>Name:</label> <br />
-      <input type='text' id='name' autoComplete='off' value={form.Name} onChange={handleChange}/>
+      <input
+        type='text'
+        id='name'
+        autoComplete='off'
+        value={form.Name}
+        onChange={handleChange}
+        required
+      />
+      {errors.Name && <span style={{ color: 'red', marginLeft: '10px' }}>{errors.Name}</span>} {/* Error for Name */}
       <br />
+
       <div style={{ marginTop: '10px' }}>
         <label>Password:</label> <br />
-        <input type='text' id='password' autoComplete='off' value={form.Password} onChange={handleChange}required/>
+        <input
+          type='text'
+          id='password'
+          autoComplete='off'
+          value={form.Password}
+          onChange={handleChange}
+          required
+        />
+        {errors.Password && <span style={{ color: 'red', marginLeft: '10px' }}>{errors.Password}</span>} {/* Error for Password */}
       </div>
       <br />
+
       <button onClick={handleSubmit}>Submit</button>
       <br />
-      <a href="#" id='sign' onClick={() => navigate("/useeffects")} className="btn" >
-        Sign In
-      </a>
+      <p style={{ marginLeft: '60px',display:'block' }}>
+        Login to the account{" "}
+        <a
+          href="#"
+          id='sign'
+          onClick={() => navigate("/useeffects")}
+          className="btn"
+        >
+          Sign In
+        </a>
+      </p>
     </div>
   );
 }
 
 export default Useeffect;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -105,12 +177,6 @@ export default Useeffect;
 // }
 
 // export default Useeffect
-
-
-
-
-
-
 
 
 

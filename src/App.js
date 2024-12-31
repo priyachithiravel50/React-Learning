@@ -24,6 +24,10 @@ import Usestateform from './component/Usestateform';
 import Useffect from './component/Useeffect';
 import MyComponent from './component/MyComponent';
 import UseEffects from './component/UseEffects';
+// import DisplayData from './component/Display';
+import Display from './component/display';
+import Displayform from './component/displayform';
+
 
 
 
@@ -60,6 +64,9 @@ function App() {
       <Route path='/useeffect' element={<Useffect/>}/>
       <Route path='/mycomponent' element={<MyComponent/>}/>
       <Route path='/useeffects' element={<UseEffects/>}/>
+      <Route path='/display' element={<Display/>}/>
+      <Route path='/displayform' element={<Displayform/>}/>
+      
       
       
 

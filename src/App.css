@@ -133,17 +133,28 @@ button{
   border: 1px solid #ccc;
   padding: 6px;
   margin-left: 115px;
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 15px;
 }
 
 button:hover{
-  background-color: red;
+  background-color: rgb(237, 226, 226);
 }
 
+#button{
+  width: 100px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 6px;
+  margin-left: 170px;
+  margin-top: 40px;
+  font-size: 15px;
+}
 #sign{
-  margin-left: 270px;
-  margin-bottom: 50px;
+  /* margin-left: 180px; */
+  /* margin-bottom:  1px; */
+  margin-top: 40px;
+  
 }
 
 
@@ -155,13 +166,15 @@ button:hover{
 
   .text1{
     margin: auto;
-    margin-top: 2%;
-    height: 570px;
+    margin-top: 1%;
+    height: min-content;
     background: white;
-    width: 400px;
+    margin-bottom: 20px;
+    width: 450px;
     padding: 50px;
     border-radius: 10px;
     /* margin: 50px auto; */
     /* background-color: whitesmoke; */
     box-shadow: rgba(60, 66, 87, 0.12) 0px 0px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
   }
+
