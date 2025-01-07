@@ -27,6 +27,8 @@ import UseEffects from './component/UseEffects';
 // import DisplayData from './component/Display';
 import Display from './component/display';
 import Displayform from './component/displayform';
+import User from './component/User';
+import { Container } from '@mui/material';
 
 
 
@@ -66,6 +68,8 @@ function App() {
       <Route path='/useeffects' element={<UseEffects/>}/>
       <Route path='/display' element={<Display/>}/>
       <Route path='/displayform' element={<Displayform/>}/>
+      <Route path='/container' element={<Container/>}/>
+      <Route path='/user' element={<User/>}/>
       
       
       

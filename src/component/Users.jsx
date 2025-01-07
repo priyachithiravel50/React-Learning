@@ -1,13 +1,11 @@
-import React from 'react'
-import User from './User'
+import React, { useContext } from "react";
+import ThemeContext from "./ThemeContext"; // Import the context
 
-function Users() {
-  return (
-    <div>
-      <h1>Users</h1>
-      <User/>
-    </div>
-  )
-}
+const ChildComponent = () => {
+  // Access the context value using useContext
+  const theme = useContext(ThemeContext);
 
-export default Users
+  return <p>Current Theme: {theme}</p>;
+};
+
+export default ChildComponent;

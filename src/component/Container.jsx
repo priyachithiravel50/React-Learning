@@ -1,12 +1,6 @@
-import React from 'react'
+import { createContext } from "react";
 
-function container() {
-  return (
-    <div>
-      <h1>container</h1>
-      <Users/>
-    </div>
-  )
-}
+// Create Context
+const ThemeContext = createContext();
 
-export default container
+export default ThemeContext;
