@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import { usereducer } from 'react';
 
-function Usestate() {
+function Usereducer() {
     const name = useState('priya')
 
    const [count, setCount] = useState(0); 
@@ -23,8 +24,5 @@ function Usestate() {
   )
 }
 
-export default Usestate
-
-
-
+export default Usereducer;
 

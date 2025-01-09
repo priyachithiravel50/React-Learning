@@ -28,7 +28,12 @@ import UseEffects from './component/UseEffects';
 import Display from './component/display';
 import Displayform from './component/displayform';
 import Context from './component/Context';
-import Useref from './component/Useref';
+import Refer from './component/refer';
+import { Table } from '@mui/material';
+import Usereducer from './component/Usereducer';
+import Usecallback from './component/Usecallback';
+
+
 
 
 
@@ -72,7 +77,15 @@ function App() {
       <Route path='/display' element={<Display/>}/>
       <Route path='/displayform' element={<Displayform/>}/>
       <Route path='/context' element={<Context/>}/>
-      <Route path='/useref' element={<Useref/>}/>
+      <Route path='/refer' element={<Refer/>}/>
+      <Route path='/table' element={<Table/>}/>
+      <Route path='/usereducer' element={<Usereducer/>}/>
+      <Route path='/usecallback' element={<Usecallback/>}/>
+      
+      
+      
+    
+
       
       
       

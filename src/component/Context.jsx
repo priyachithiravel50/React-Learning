@@ -9,7 +9,7 @@ const Context = () => {
     name: "Priya",
     role: "Frontend Developer intern",
     location: "Thanjavur",
-    experience: "6 month",
+    experience: "6 months",
     company: "Ebrain Technologies",
   };
 
@@ -62,3 +62,5 @@ const ChildFive = () => {
 };
 
 export default Context;
+
+
